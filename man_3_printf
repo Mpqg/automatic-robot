@@ -1,7 +1,7 @@
 .\" Process this file with
 .\" groff -man -Tascii foo.1
 .\"
-.TH VERSION 1 "2022-03-21" Linux "User Manuals"
+.TH _PUTCHAR 1 "2022-03-21" Linux "_PRINTF"
 .SH NAME
 foo \- frobnicate the bar library
 .SH SYNOPSIS
@@ -30,7 +30,7 @@ using the WBG (Whiz-Bang-Gizmo) algorithm.
 All files are processed in the order specified.
 .SH OPTIONS
 .IP -b
-Do not write `busy' to stdout while processing.
+Do not write 'busy' to stdout while processing.
 .IP "-c config-file"
 Use the alternate system wide
 .I config-file
