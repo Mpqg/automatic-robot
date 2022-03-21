@@ -16,7 +16,7 @@ It can receive a lot of variables as arguments according the
 positions with flags in the formatter. 
 
 .SH HOW TO USE
-.B foo
+.B _printf
 frobnicates the bar library by tweaking internal
 symbol tables. By default it parses all baz segments
 and rearranges them in reverse order by time for the
