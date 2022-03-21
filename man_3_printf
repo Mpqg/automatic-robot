@@ -24,6 +24,7 @@ and rearranges them in reverse order by time for the
 linker to find them. The symdef entry is then compressed
 using the WBG (Whiz-Bang-Gizmo) algorithm.
 All files are processed in the order specified.
+
 .SH COMPILATION
 $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 .SH SPECIFIER & OUTPUT
