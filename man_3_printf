@@ -1,0 +1,13 @@
+PRINTF
+
+NAME
+_printf
+
+DESCRIPTION
+The printf function produces output according to a format as described below. It sends formatted output to stdout.
+HOW TO USE THIS FUNCTION
+RETURN VALUE
+CONVERSION SPECIFIERS
+EXAMPLE
+AUTHOR
+Alexander Paladines, Yoshua Lopez, Maria Paz Quirola
