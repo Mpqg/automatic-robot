@@ -1,13 +1,53 @@
-PRINTF
-
-NAME
-_printf
-
-DESCRIPTION
-The printf function produces output according to a format as described below. It sends formatted output to stdout.
-HOW TO USE THIS FUNCTION
-RETURN VALUE
-CONVERSION SPECIFIERS
-EXAMPLE
-AUTHOR
-Alexander Paladines, Yoshua Lopez, Maria Paz Quirola
+.\" Process this file with
+.\" groff -man -Tascii foo.1
+.\"
+.TH VERSION 1 "2022-03-21" Linux "User Manuals"
+.SH NAME
+foo \- frobnicate the bar library
+.SH SYNOPSIS
+.B foo [-bar] [-c
+.I config-file
+.B ]
+.I file
+.B ...
+.SH DESCRIPTION
+.B foo
+frobnicates the bar library by tweaking internal
+symbol tables. By default it parses all baz segments
+and rearranges them in reverse order by time for the
+.BR xyzzy (1)
+linker to find them. The symdef entry is then compressed
+using the WBG (Whiz-Bang-Gizmo) algorithm.
+All files are processed in the order specified.
+.SH HOW TO USE
+.B foo
+frobnicates the bar library by tweaking internal
+symbol tables. By default it parses all baz segments
+and rearranges them in reverse order by time for the
+.BR xyzzy (1)
+linker to find them. The symdef entry is then compressed
+using the WBG (Whiz-Bang-Gizmo) algorithm.
+All files are processed in the order specified.
+.SH OPTIONS
+.IP -b
+Do not write `busy' to stdout while processing.
+.IP "-c config-file"
+Use the alternate system wide
+.I config-file
+instead of
+.IR /etc/foo.conf .
+This overrides any
+.B FOOCONF
+environment variable.
+.IP -a
+In addition to the baz segments, also parse the
+blurfl headers.
+.IP -r
+Recursive mode. Operates as fast as lightning
+at the expense of a megabyte of virtual memory.
+.SH AUTHOR
+Jens Schweikhardt <howto at schweikhardt dot net>
+.SH "SEE ALSO"
+.BR putchar (1),
+.BR foo (5),
+.BR xyzzy (1)
