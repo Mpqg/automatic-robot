@@ -2,23 +2,28 @@
 
 /**
  * print_char - prints a character
- * This is for %c formatter
- * @return int
+ * @c: character
+ * Return string
  */
 int print_char(char c)
 {
 	if (c == NULL)
-		return (0);
+		return (NULL);
 	_putchar(c);
+	return (1);
 }
 
 /**
  * print_string - prints a string
- * This is for %s formatter
- * @return int
+ * @str: character
+ * Return: string
  */
 int print_string(char *str)
 {
+	int i;
 	if (str == NULL)
-		return (0);
+		return (NULL);
+	for (i = 0; str[i]; i++)
+		_putchar(str[i]);
+	return (i);
 }
