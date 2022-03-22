@@ -16,14 +16,23 @@ It can receive a lot of variables as arguments according the
 positions with flags in the formatter. 
 
 .SH HOW TO USE
-.B _printf
-frobnicates the bar library by tweaking internal
-symbol tables. By default it parses all baz segments
-and rearranges them in reverse order by time for the
-.BR xyzzy (1)
-linker to find them. The symdef entry is then compressed
-using the WBG (Whiz-Bang-Gizmo) algorithm.
-All files are processed in the order specified.
+.B _printf \- Belongs to the library stdio.h.
+Allows to display (data), The function is created
+.IP printf();
+Parameters are placed inside the parantheses.
+The function returns a value that represents the character number
+
+.IP -syntax
+printf("chain", value_1, value_2,...)
+
+.SH example
+#include "main.h"
+
+int main(void)
+.IP {
+.IP _printf("Hello World.\n");
+.IP "return (0);"
+.IP }
 
 .SH COMPILATION
 $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
