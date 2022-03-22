@@ -7,8 +7,6 @@
  */
 int print_char(va_list arguments)
 {
-	if (c == NULL)
-		return (NULL);
 	_putchar(va_arg(arguments, int));
 	return (1);
 }
