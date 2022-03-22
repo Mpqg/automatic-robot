@@ -18,10 +18,16 @@ typedef struct printHandler
 
 int _printf(const char *format, ...);
 int _putchar(char c);
+int _puts(char *str);
+char *string_to_base(int num, int base);
 /** prints text*/
-int print_char(char c);
-int print_string(char *str);
+int print_char(va_list arguments);
+int print_string(va_list arguments);
 /** prints nums*/
 int print_int(int i);
+/** prints basics*/
+int print_hexa(va_list arguments);
+int print_octal(va_list arguments);
+int print_binary(va_list arguments);
 
 #endif
