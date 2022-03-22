@@ -4,7 +4,7 @@
  * _puts - custom printf
  * @str: text to print
  */
-void _puts(char *str)
+int _puts(char *str)
 {
 	int i;
 
@@ -13,4 +13,5 @@ void _puts(char *str)
 		_putchar(str[i]);
 	}
 	_putchar('\n');
+	return (i);
 }
