@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * print_int - print an integer
  *
@@ -8,11 +9,11 @@
 
 int print_int(int i)
 {
-	if (i < 0)
+	if (i >= 0)
 	{
-		return (NULL);
+		_putchar(i + '\0');
 	}
-	_putchar(i);
+		return (1);
 }
 /**
  * print_unsigned - print an unsigned integer
