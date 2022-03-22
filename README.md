@@ -23,3 +23,8 @@ You don’t have to handle field width
 You don’t have to handle precision
 You don’t have to handle the length modifiers
 Task 2. Create a man page for your function.
+
+
+<p align="center">
+	<img src="./assets/flowchar-printf-project.jpg"/>
+</p>
