@@ -2,28 +2,26 @@
 
 /**
  * print_char - prints a character
- * @c: character
- * Return string
+ * @arguments: character
+ * Return: Always 0
  */
-int print_char(char c)
+int print_char(va_list arguments)
 {
 	if (c == NULL)
 		return (NULL);
-	_putchar(c);
+	_putchar(va_arg(arguments, int));
 	return (1);
 }
 
 /**
  * print_string - prints a string
- * @str: character
+ *
+ * @arguments: character
  * Return: string
  */
-int print_string(char *str)
+int print_string(va_list arguments)
 {
-	int i;
-	if (str == NULL)
-		return (NULL);
-	for (i = 0; str[i]; i++)
-		_putchar(str[i]);
-	return (i);
+	char *str = va_arg(arguments, char *);
+
+	return (_puts(str));
 }

@@ -13,7 +13,7 @@
 typedef struct printHandler
 {
 	char c;
-	int (*f)(va_list);
+	int (*f)(va_list arguments);
 } ph;
 
 int _printf(const char *format, ...);

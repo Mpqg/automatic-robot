@@ -4,8 +4,8 @@ int(*get_print(char c))
 {
 
 	ph handlers[] = {
-			{"c", print_char},
-			{"s", print_string},
+			{'c', print_char},
+			{'s', print_string},
 	};
 
 	return (NULL);
