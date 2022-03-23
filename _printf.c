@@ -43,10 +43,10 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				_putchar(format[i])
+				length += _putchar(format[i]);
 			}
 		}
 	}
 
-	return (length)
+	return (length);
 }
