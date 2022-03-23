@@ -53,6 +53,8 @@ int main(void)
 - Yoshua Lopez 
 - Maria Paz Quirola
 
+## Flowchart
+
 <p align="center">
 	<img src="./assets/flowchar-printf-project.jpg"/>
 </p>
