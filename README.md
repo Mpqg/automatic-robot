@@ -1,29 +1,40 @@
 # Printf proyect group - Ecuador
-First Group Project
-Task 0. Write a function that produces output according to a format.
 
-Prototype: int _printf(const char *format, ...);
-Returns: the number of characters printed (excluding the null byte used to end output to strings)
-write output to stdout, the standard output stream
-format is a character string. The format string is composed of zero or more directives. See man 3 printf for more detail. You need to handle the following conversion specifiers:
-c
-s
-%
-You don’t have to reproduce the buffer handling of the C library printf function
-You don’t have to handle the flag characters
-You don’t have to handle field width
-You don’t have to handle precision
-You don’t have to handle the length modifiers
-Task 1. Handle the following conversion specifiers:
 
-d
-i
-You don’t have to handle the flag characters
-You don’t have to handle field width
-You don’t have to handle precision
-You don’t have to handle the length modifiers
-Task 2. Create a man page for your function.
+## Descripcion 
 
+The function _printf is a variadic function that produces
+a string according to a format and prints it to the standard
+output, much like the C standard library function "printf".
+It can receive a lot of variables as arguments according the
+positions with flags in the formatter.
+
+## Prototype
+
+```c
+int _printf(const char *format, ...);
+```
+
+## Usage
+
+_printf \- Belongs to the library stdio.h.
+Allows to display (data), The function is created
+printf();
+Parameters are placed inside the parantheses.
+The function returns a value that represents the character number
+
+-syntax
+printf("chain", value_1, value_2,...)
+
+```c
+#include "main.h"
+
+int main(void)
+{
+	_printf("Hello World.\n");
+	return (0);
+}
+```
 
 <p align="center">
 	<img src="./assets/flowchar-printf-project.jpg"/>
