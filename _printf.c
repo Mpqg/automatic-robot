@@ -9,26 +9,20 @@ int _printf(const char *format, ...)
 {
 
 	va_list content;
-	int(*printer)(va_list);
+	int (*printer)(va_list);
+
 	va_arg(content, char *);
 	int i = 0;
 	int length = 0;
 
-	/**
-	 * Validate that text
-	 * provided by the user
-	 * is empty; In the case
-	 * that field is empty should
-	 * return -1
-	 *
-	 */
-
-	/**
-	 * Validate that text
-	 * provided by the user
-	 * starts with '%' and the
-	 * next value is empty;
-	 */
+	if (format == NULL || (format[0] == '%' && format[1] == NULL))
+	{
+		return (-1);
+	}
+	if (format[0] == '%' && format[1] == ' ' && format[2] == NULL)
+	{
+		return (-1);
+	}
 
 	for (i = 0; format[i]; i++)
 	{
