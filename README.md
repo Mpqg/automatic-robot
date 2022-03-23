@@ -36,6 +36,18 @@ int main(void)
 }
 ```
 
+## Example
+
+```c
+#include "main.h"
+
+int main(void)
+{
+	_printf("Let\'s try to printf a simple sentence.\n");
+	return (0);
+}
+```
+
 <p align="center">
 	<img src="./assets/flowchar-printf-project.jpg"/>
 </p>
