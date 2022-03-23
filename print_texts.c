@@ -20,5 +20,10 @@ int print_string(va_list arguments)
 {
 	char *str = va_arg(arguments, char *);
 
+	if (!str)
+	{
+		str = "(nil)";
+	}
+
 	return (_puts(str));
 }
