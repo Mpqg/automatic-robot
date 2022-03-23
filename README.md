@@ -47,6 +47,11 @@ int main(void)
 	return (0);
 }
 ```
+## Authors - Cohort 17
+
+- Alexander Paladines 
+- Yoshua Lopez 
+- Maria Paz Quirola
 
 <p align="center">
 	<img src="./assets/flowchar-printf-project.jpg"/>
