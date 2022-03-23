@@ -1,16 +1,15 @@
 #include "main.h"
 
-int (*get_print(char *c))(va_list)
+int (*get_print(char c))(va_list)
 {
 
 	ph handlers[] = {
 			{'c', print_char},
 			{'s', print_string},
-			{NULL, NULL},
 	};
 	int i = 0;
 
-	while (handlers[i].c && handlers[i].c != c)
+	while (handlers[i].c && (handlers[i].c != c))
 	{
 		i++;
 	}
