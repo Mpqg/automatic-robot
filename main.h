@@ -24,7 +24,8 @@ char *string_to_base(int num, int base);
 int print_char(va_list arguments);
 int print_string(va_list arguments);
 /** prints nums*/
-int print_int(int i);
+int print_int(va_list arguments);
+int print_unsigned(va_list arguments);
 /** prints basics*/
 int print_hexa(va_list arguments);
 int print_octal(va_list arguments);
