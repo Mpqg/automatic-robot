@@ -10,8 +10,13 @@ int (*get_print(char c))(va_list)
 {
 
 	ph handlers[] = {
-		{'c', print_char},
-		{'s', print_string},
+			{'c', print_char},
+			{'d', print_int},
+			{'s', print_string},
+			{'i', print_unsigned},
+			{'o', print_octal},
+			{'u', print_unsigned},
+			{'x', print_hexa},
 	};
 	int i = 0;
 
