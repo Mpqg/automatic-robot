@@ -15,11 +15,11 @@ int _printf(const char *format, ...)
 	int i = 0;
 	int length = 0;
 
-	if (format == NULL || (format[0] == '%' && format[1] == NULL))
+	if (format == NULL || (format[0] == '%' && !format[1]))
 	{
 		return (-1);
 	}
-	if (format[0] == '%' && format[1] == ' ' && format[2] == NULL)
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
 	{
 		return (-1);
 	}
@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 
 			printer = get_print(format[i + 1]);
 
-			if (get_print(format[i + 1]))
+			if (printer)
 			{
 				length += printer(content);
 			}
@@ -41,6 +41,13 @@ int _printf(const char *format, ...)
 			}
 		}
 	}
+	va_end(content);
 
 	return (length);
 }
+
+/**
+ * Tes's that fail
+ * 2, 5, 7, 9++
+ *
+ */
