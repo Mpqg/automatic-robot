@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 {
 
 	va_list content;
-	int(printer(va_list));
+	int(*printer)(va_list);
 	va_arg(content, char *);
 	int i = 0;
 	int length = 0;
