@@ -3,6 +3,7 @@
 /**
  * _puts - custom printf
  * @str: text to print
+ * Return: length
  */
 int _puts(char *str)
 {
