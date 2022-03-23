@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>
-#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * struct printHandler - struct for agrupate
@@ -13,22 +13,23 @@
 typedef struct printHandler
 {
 	char c;
-	int (*f)(va_list arguments);
+	int (*f)(va_list);
 } ph;
 
 int _printf(const char *format, ...);
+int (*get_print(char c))(va_list);
 int _putchar(char c);
 int _puts(char *str);
 char *string_to_base(int num, int base);
 /** prints text*/
-int print_char(va_list arguments);
-int print_string(va_list arguments);
+int print_char(va_list);
+int print_string(va_list);
 /** prints nums*/
-int print_int(va_list arguments);
-int print_unsigned(va_list arguments);
+int print_int(va_list);
+int print_unsigned(va_list);
 /** prints basics*/
-int print_hexa(va_list arguments);
-int print_octal(va_list arguments);
-int print_binary(va_list arguments);
+int print_hexa(va_list);
+int print_octal(va_list);
+int print_binary(va_list);
 
 #endif

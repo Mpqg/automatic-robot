@@ -1,41 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-/**
- * print_int - print an integer
- *
- * @arguments: integer
- * Return: Always 0
- */
-
-int print_int(va_list arguments)
-{
-	int num = va_arg(arguments, int);
-
-	if (num < 0)
-	{
-		num = num * -1;
-	}
-	print_number(num);
-	return (count_digits(num));
-}
-
-/**
- * print_number - print integer
- * @n: integer
- */
-void print_number(long n)
-{
-	if (n < 0)
-	{
-		putchar('-');
-		n = -n;
-	}
-
-	if (n / 10)
-		print(n / 10);
-
-	putchar(n % 10 + '0');
-}
 
 /**
  * count_digits - digits count
@@ -55,6 +19,43 @@ int count_digits(int i)
 		count++;
 	}
 	return (count);
+}
+
+/**
+ * print_number - print integer
+ * @n: integer
+ */
+void print_number(long n)
+{
+	if (n < 0)
+	{
+		putchar('-');
+		n = -n;
+	}
+
+	if (n / 10)
+		print_number(n / 10);
+
+	putchar(n % 10 + '0');
+}
+
+/**
+ * print_int - print an integer
+ *
+ * @arguments: integer
+ * Return: Always 0
+ */
+
+int print_int(va_list arguments)
+{
+	int num = va_arg(arguments, int);
+
+	if (num < 0)
+		num = num * -1;
+
+	print_number(num);
+
+	return (count_digits(num));
 }
 
 /**
