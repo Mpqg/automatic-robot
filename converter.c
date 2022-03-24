@@ -6,7 +6,7 @@
  * @base: 2, 8, 10, 16 depending of the type
  * Return: Always 0
  */
-char *string_to_base(int num, int base)
+char *string_to_base(unsigned long int num, int base)
 {
 	static char *replace;
 	static char buffer[50];
@@ -15,7 +15,8 @@ char *string_to_base(int num, int base)
 	replace = "0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = '\0';
-	do {
+	do
+	{
 		*--ptr = replace[num % base];
 		num /= base;
 	} while (num != 0);
