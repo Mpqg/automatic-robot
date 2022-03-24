@@ -13,10 +13,11 @@ int (*get_print(char c))(va_list)
 			{'c', print_char},
 			{'d', print_int},
 			{'s', print_string},
-			{'i', print_unsigned},
+			{'i', print_int},
 			{'o', print_octal},
 			{'u', print_unsigned},
 			{'x', print_hexa},
+			{'b', print_binary},
 	};
 	int i = 0;
 
