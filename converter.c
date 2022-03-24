@@ -15,8 +15,7 @@ char *string_to_base(unsigned long int num, int base)
 	replace = "0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = '\0';
-	do
-	{
+	do {
 		*--ptr = replace[num % base];
 		num /= base;
 	} while (num != 0);
