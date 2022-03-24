@@ -8,21 +8,18 @@
 int _printf(const char *format, ...)
 {
 
-	va_list content;
 	int (*printer)(va_list);
-
 	int length = 0;
 	const char *f;
+	va_list content;
+
 	va_start(content, format);
 
 	if (format == NULL || (format[0] == '%' && !format[1]))
-	{
 		return (-1);
-	}
+
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
-	{
 		return (-1);
-	}
 
 	for (f = format; *f; f++)
 	{
@@ -30,17 +27,12 @@ int _printf(const char *format, ...)
 		{
 			f++;
 			if (*f == '%')
-			{
-				length = length + _putchar(*f);
-				continue;
-			}
-				
+				length += _putchar(*f), continue;
+
 			printer = get_print(*f);
 
 			if (printer)
-			{
 				length += printer(content);
-			}
 		}
 		else
 		{
@@ -51,9 +43,3 @@ int _printf(const char *format, ...)
 
 	return (length);
 }
-
-/**
- * Tes's that fail
- * 2, 5, 7, 9++
- *
- */
