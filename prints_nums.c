@@ -11,7 +11,10 @@ int count_digits(int i)
 	int count = 0;
 	int num;
 
-	num = i;
+	if (i < 0)
+		num = i * -1;
+	else
+		num = i;
 
 	while (num != 0)
 	{
@@ -25,18 +28,19 @@ int count_digits(int i)
  * print_number - print integer
  * @n: integer
  */
-void print_number(long n)
+void print_number(int n)
 {
+	int num = n;
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		num = -n;
 	}
 
-	if (n / 10)
-		print_number(n / 10);
+	if (num / 10)
+		print_number(num / 10);
 
-	_putchar((n % 10) + '0');
+	_putchar((num % 10) + '0');
 }
 
 /**
@@ -49,13 +53,11 @@ void print_number(long n)
 int print_int(va_list arguments)
 {
 	int num = va_arg(arguments, int);
-
-	if (num < 0)
-		num = num * -1;
+	int count = count_digits(num);
 
 	print_number(num);
 
-	return (count_digits(num));
+	return (count);
 }
 
 /**
