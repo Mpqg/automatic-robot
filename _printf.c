@@ -11,9 +11,9 @@ int _printf(const char *format, ...)
 	va_list content;
 	int (*printer)(va_list);
 
-	va_arg(content, char *);
-	int i = 0;
 	int length = 0;
+	const char *f;
+	va_start(content, format);
 
 	if (format == NULL || (format[0] == '%' && !format[1]))
 	{
@@ -24,21 +24,22 @@ int _printf(const char *format, ...)
 		return (-1);
 	}
 
-	for (i = 0; format[i]; i++)
+	for (f = format; *f; f++)
 	{
-		if (format[i] == '%')
+		if (*f == '%')
 		{
+			f++;
 
-			printer = get_print(format[i + 1]);
+			printer = get_print(*f);
 
 			if (printer)
 			{
 				length += printer(content);
 			}
-			else
-			{
-				length += _putchar(format[i]);
-			}
+		}
+		else
+		{
+			length += _putchar(*f);
 		}
 	}
 	va_end(content);
