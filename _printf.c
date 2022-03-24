@@ -29,7 +29,12 @@ int _printf(const char *format, ...)
 		if (*f == '%')
 		{
 			f++;
-
+			if (*f == '%')
+			{
+				length = length + _putchar(*f);
+				continue;
+			}
+				
 			printer = get_print(*f);
 
 			if (printer)
