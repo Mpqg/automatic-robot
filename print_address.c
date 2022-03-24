@@ -6,7 +6,7 @@
  * Return: lenght
  */
 
-int print_address(char c)
+int print_address()
 {
 	return (0);
 }
