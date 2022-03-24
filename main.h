@@ -20,7 +20,7 @@ int _printf(const char *format, ...);
 int (*get_print(char c))(va_list);
 int _putchar(char c);
 int _puts(char *str);
-char *string_to_base(int num, int base);
+char *string_to_base(unsigned long int num, int base);
 /** prints text*/
 int print_char(va_list);
 int print_string(va_list);
