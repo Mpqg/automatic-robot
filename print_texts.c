@@ -22,7 +22,7 @@ int print_string(va_list arguments)
 
 	if (!str)
 	{
-		str = "(nil)";
+		return (_puts("(nil)"));
 	}
 
 	return (_puts(str));
