@@ -2,7 +2,6 @@
 
 /**
  * print_address - memory address
- * @c: character
  * Return: lenght
  */
 
