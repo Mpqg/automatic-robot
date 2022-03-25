@@ -20,9 +20,9 @@ int print_string(va_list arguments)
 {
 	char *str = va_arg(arguments, char *);
 
-	if (!str)
+	if (!str || !*str)
 	{
-		return (_puts("(nil)"));
+		return (_puts("(null)"));
 	}
 
 	return (_puts(str));
