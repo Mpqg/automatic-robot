@@ -2,6 +2,7 @@
 #define MAIN_H
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 /**
  * struct printHandler - struct for agrupate
@@ -20,7 +21,7 @@ int _printf(const char *format, ...);
 int (*get_print(char c))(va_list);
 int _putchar(char c);
 int _puts(char *str);
-char *string_to_base(unsigned long int num, int base);
+char *string_to_base(unsigned long int num, int base, bool uppercase);
 /** prints text*/
 int print_char(va_list);
 int print_string(va_list);
@@ -32,5 +33,9 @@ int print_hexa(va_list);
 int print_octal(va_list);
 int print_binary(va_list);
 int print_percent(va_list);
+int print_hexa_in_uppercase(va_list);
+/** utilities */
+int count_digits(int i);
+void print_number(int n);
 
 #endif
