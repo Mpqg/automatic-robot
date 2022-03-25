@@ -18,13 +18,18 @@ int (*get_print(char c))(va_list)
 			{'u', print_unsigned},
 			{'x', print_hexa},
 			{'b', print_binary},
+			{'%', print_percent},
 	};
 	int i = 0;
 
-	while (handlers[i].c && (handlers[i].c != c))
+	while (handlers[i].c)
 	{
+		if (handlers[i].c == c)
+		{
+			return (handlers[i].f);
+		}
 		i++;
 	}
 
-	return (handlers[i].f);
+	return (NULL);
 }
