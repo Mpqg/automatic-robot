@@ -47,3 +47,15 @@ int print_binary(va_list arguments)
 
 	return (_puts(str));
 }
+
+/**
+ * print_percent - print percent symbol
+ * @arguments: binary number
+ *
+ * Return: Always 0
+ */
+int print_percent(va_list arguments)
+{
+	(void)arguments;
+	return (_putchar('%'));
+}

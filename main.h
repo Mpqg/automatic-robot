@@ -31,5 +31,6 @@ int print_unsigned(va_list);
 int print_hexa(va_list);
 int print_octal(va_list);
 int print_binary(va_list);
+int print_percent(va_list);
 
 #endif
