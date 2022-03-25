@@ -8,13 +8,30 @@
  */
 int print_hexa(va_list arguments)
 {
-	char *str = string_to_base(va_arg(arguments, int), 16);
+	char *str = string_to_base(va_arg(arguments, unsigned int), 16, false);
 
 	if (str == NULL)
 		return (0);
 
 	return (_puts(str));
 }
+
+/**
+ * print_hexa_in_uppercase - print a hexadecimal in uppercase
+ *
+ * @arguments: hexadecimal
+ * Return: Always 0
+ */
+int print_hexa_in_uppercase(va_list arguments)
+{
+	char *str = string_to_base(va_arg(arguments, unsigned int), 16, true);
+
+	if (str == NULL)
+		return (0);
+
+	return (_puts(str));
+}
+
 /**
  * print_octal - prints an octal number
  *
@@ -24,7 +41,7 @@ int print_hexa(va_list arguments)
  */
 int print_octal(va_list arguments)
 {
-	char *str = string_to_base(va_arg(arguments, int), 8);
+	char *str = string_to_base(va_arg(arguments, unsigned int), 8, false);
 
 	if (str == NULL)
 		return (0);
@@ -40,7 +57,7 @@ int print_octal(va_list arguments)
  */
 int print_binary(va_list arguments)
 {
-	char *str = string_to_base(va_arg(arguments, int), 2);
+	char *str = string_to_base(va_arg(arguments, unsigned int), 2, false);
 
 	if (str == NULL)
 		return (0);
