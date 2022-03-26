@@ -26,6 +26,8 @@ char *string_to_base(unsigned long int num, int base, bool uppercase);
 int print_char(va_list);
 int print_string(va_list);
 int print_reverse_string(va_list);
+/** print mememory address */
+int print_address(va_list);
 /** prints nums*/
 int print_int(va_list);
 int print_unsigned(va_list);

@@ -16,6 +16,7 @@ int (*get_print(char c))(va_list)
 			{'i', print_int},
 			{'o', print_octal},
 			{'u', print_unsigned},
+			{'p', print_address},
 			{'x', print_hexa},
 			{'r', print_reverse_string},
 			{'X', print_hexa_in_uppercase},
