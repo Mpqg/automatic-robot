@@ -13,6 +13,11 @@ int print_int(va_list arguments)
 	int num = va_arg(arguments, int);
 	int count = count_digits(num);
 
+	if (num <= 0)
+	{
+		count += 1;
+	}
+
 	print_number(num);
 
 	return (count);
