@@ -25,6 +25,7 @@ char *string_to_base(unsigned long int num, int base, bool uppercase);
 /** prints text*/
 int print_char(va_list);
 int print_string(va_list);
+int print_reverse_string(va_list);
 /** prints nums*/
 int print_int(va_list);
 int print_unsigned(va_list);
@@ -37,5 +38,6 @@ int print_hexa_in_uppercase(va_list);
 /** utilities */
 int count_digits(int i);
 void print_number(int n);
+void print_rev_recursion(char *s);
 
 #endif
