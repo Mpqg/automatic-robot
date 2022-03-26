@@ -4,6 +4,7 @@
  *
  * @num: number
  * @base: 2, 8, 10, 16 depending of the type
+ * @uppercase: is hex to uppercase
  * Return: Always 0
  */
 char *string_to_base(unsigned long int num, int base, bool uppercase)
