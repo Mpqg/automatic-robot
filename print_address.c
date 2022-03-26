@@ -13,7 +13,7 @@ int print_address(va_list arguments)
 
 	if (!variable)
 	{
-		return (_puts("(null)"));
+		return (_puts("(nil)"));
 	}
 
 	len += _puts("0x");
