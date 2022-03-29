@@ -36,6 +36,11 @@ int main(void)
 }
 ```
 
+## RETURN VALUE
+
+If successful, the total number of characters written is returned. On failure,
+a negative number is returned.
+
 ## Example
 
 ```c
